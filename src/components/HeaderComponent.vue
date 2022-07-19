@@ -34,5 +34,6 @@ export default {
 li {
   list-style: none;
   padding: 10px;
+  
 }
 </style>
