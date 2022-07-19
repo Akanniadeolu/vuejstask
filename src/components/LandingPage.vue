@@ -2,7 +2,7 @@
 <div class="container">
     <HeaderComponent/>
     <div class="landingpagecontainer">
-        <div class="logo">
+        <div class="image">
         <img alt="firstsectionimage" class="firstsectionimage" src="@/assets/large.png" /> 
         </div>
         <div class="firstsectiontext">
@@ -14,8 +14,8 @@
             To see how CSS affects the load time of a webpage we first have to know how the browser converts an HTML document into a functional webpage...
         </p>
         <div class="bottom-text">
-            <span>3 mins read</span>   
-            <router-link to="/blog">Read More</router-link>
+            <p>3 mins read</p>   
+            <router-link to="/blog" class="router">Read Full</router-link>
         </div>
         </div>
     </div>
@@ -47,44 +47,56 @@ export default {
                 {
                     id: 1,
                     date: "Front-end:  1 Month ago",
-                    img: "./images/1.jpeg",
-                    title: "Css Grid",
-                    text: "The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.",
-                },
-                {
-                    id: 2,
-                    date: "Front-end:  1 Month ago",
                     img: "./images/2.jpeg",
                     title: "Colors in Css",
                     text: "Colors play a vital role in making a web page usable or not. In CSS, we can control the foreground and background color of an element with the color and background properties.",
+                    time: "12 Min Read",
+                    route: "Read Full",
+                },
+                {
+                    id: 2,
+                    date: "Front-end:  2 Month ago",
+                    img: "./images/1.jpeg",
+                    title: "Css Grid",
+                    text: "The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.",
+                    time: "8 Min Read",
+                    route: "Read Full",
                 },
                 {
                     id: 3,
-                    date: "Front-end:  1 Month ago",
+                    date: "Front-end:  2 Month ago",
                     img: "./images/3.jpeg",
                     title: "Css Variables",
                     text: "CSS variables are custom properties that cascade normally and even inherit. They start with a reserved -- prefix, and there are no real rules about their value.",
+                    time: "10 Min Read",
+                    route: "Read Full",
                 },
                 {
                     id: 4,
                     date: "Front-end:  1 Month ago",
-                    img: "./images/1.jpeg",
-                    title: "Css Grid",
-                    text: "The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.",
-                },
-                {
-                    id: 5,
-                    date: "Front-end:  1 Month ago",
                     img: "./images/2.jpeg",
                     title: "Colors in Css",
                     text: "Colors play a vital role in making a web page usable or not. In CSS, we can control the foreground and background color of an element with the color and background properties.",
+                    time: "12 Min Read",
+                    route: "Read Full",
+                },
+                {
+                    id: 5,
+                    date: "Front-end:  2 Month ago",
+                    img: "./images/1.jpeg",
+                    title: "Css Grid",
+                    text: "The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.",
+                    time: "8 Min Read",
+                    route: "Read Full",
                 },
                 {
                     id: 6,
-                    date: "Front-end:  1 Month ago",
+                    date: "Front-end:  2 Month ago",
                     img: "./images/3.jpeg",
                     title: "Css Variables",
                     text: "CSS variables are custom properties that cascade normally and even inherit. They start with a reserved -- prefix, and there are no real rules about their value.",
+                    time: "10 Min Read",
+                    route: "Read Full",
                 }
                 
             ] 
@@ -97,27 +109,42 @@ export default {
 <style scoped>
 .container {
     margin: 0 100px 0 100px;
+    font-family: Helvetica, sans-serif, Arial;
 }
 .landingpagecontainer{
     display: flex;
     padding: 50px 0 50px 0;
 }
+.firstsectiontext {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: larger;
+}
 p {
+    font-size: small;
     color: grey;
 }
 
 img {
         margin-right: 2rem;
     }
-
-    
-    .bottom-text{
+.bottom-text{
         display: flex;
         justify-content: space-between;
-    }
-
+        align-items: flex-end;
+}
+.router {
+    font-size: small;
+    text-decoration: none;
+    color: rgb(30, 120, 255);
+}
 
 @media (max-width: 768px){
+    .container{
+        margin: 0 auto;
+    }
     .landingpagecontainer{
         flex-direction: column;
     }
@@ -139,16 +166,17 @@ img {
         gap: 1em;
     }
 
-    .logo, .firstsectiontext{
+    .image, .firstsectiontext{
         width: 50%;
+        height: 280;
     }
 
-    img {
+    /* img {
         width: 100%;
         height: 100%;
         background-position:center;
         background-repeat:no-repeat;
-    }
+    } */
 }
 
 

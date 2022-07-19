@@ -63,7 +63,9 @@ export default {
 .footer-text{
     text-align: center;
 }
-
+h1 {
+  font-size: larger;
+}
 p {
     color: gray;
     font-size: medium;

@@ -1,13 +1,14 @@
 <template>
-  <div class="top">
+  <div class="headercontainer">
     <div class="logo">
       <img alt="logo" class="logo" src="@/assets/logo.png" />
     </div>
-    <div class="nav-logos">
-      <img alt="twitter" src="@/assets/twitter.png" />
-      <img alt="vector" src="@/assets/Vector.png" />
-      <img alt="github" src="@/assets/github.png" />
-    </div>
+    <ul class="nav-logos">
+      <li><img alt="twitter" src="@/assets/twitter.png" /></li>
+      <li><img alt="dribble" src="@/assets/dribbble.png" /></li>
+      <li><img alt="figma" src="@/assets/figma.png" /></li>
+      <li><img alt="github" src="@/assets/github.png" /></li>
+    </ul>
   </div>
 </template>
 
@@ -21,14 +22,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.top {
+.headercontainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .nav-logos{
-  margin: 0 10px;
+  display: flex;
+    flex-direction: row;
 }
-
+li {
+  list-style: none;
+  padding: 10px;
+}
 </style>
